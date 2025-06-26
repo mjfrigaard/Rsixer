@@ -7,14 +7,15 @@
 
 <!-- badges: end -->
 
-The goal of `Rsixer` is to …
+The goal of `Rsixer` is to demonstrate using R6s in Shiny applications.
 
 ## Installation
 
 You can install the development version of `Rsixer` like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+install.packages("pak")
+pak::pak("mjfrigaard/Rsixer")
 ```
 
 ## Example
