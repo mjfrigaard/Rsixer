@@ -1,0 +1,20 @@
+Package: Rsixer
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: person(
+    "Martin", "Frigaard",
+    role = c("aut", "cre"),
+    email = "mjfrigaard@pm.me",
+    comment = NULL
+  )
+Description: More about what it does (maybe more than one line).
+    Continuation lines should be indented.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    listviewerlite,
+    lobstr,
+    R6,
+    rlang
