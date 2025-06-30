@@ -1,0 +1,72 @@
+---
+title: "R6 & OOP"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    toc-title: 'Contents'
+    toc-expand: true
+knitr:
+  opts_chunk: 
+    collapse: true
+    comment: "#>" 
+vignette: >
+  %\VignetteIndexEntry{R6 & OOP}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+#| labe: pkgs
+library(Rsixer)
+library(sloop)
+library(R6)
+```
+
+```{r}
+Person <- R6::R6Class("Person",
+  public = list(
+    name = NULL,
+    hair = NULL,
+    initialize = function(name = NA, hair = NA) {
+      self$name <- name
+      self$hair <- hair
+      self$greet()
+    },
+    set_hair = function(val) {
+      self$hair <- val
+    },
+    greet = function() {
+      cat(paste0("Hello, my name is ", self$name, ".\n"))
+    }
+  )
+)
+ann <- Person$new("Ann", "black")
+sloop::otype(ann)
+```
+
+```{r}
+ann
+```
+
+```{r}
+#| label: Counter
+Counter <- R6::R6Class(
+  "Counter",
+  public = list(
+    value = 0,
+    initialize = function(start = 0) {
+      self$value <- start
+    },
+    increment = function() {
+      self$value <- self$value + 1
+    },
+    reset = function() {
+      self$value <- 0
+    },
+    get = function() {
+      self$value
+    }
+  )
+)
+```

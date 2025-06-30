@@ -1,6 +1,6 @@
 Package: Rsixer
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Shiny App (built with R6)
 Version: 0.1.0
 Authors@R: person(
     "Martin", "Frigaard",
@@ -8,13 +8,20 @@ Authors@R: person(
     email = "mjfrigaard@pm.me",
     comment = NULL
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
-Encoding: UTF-8
+Description: A Shiny Application using the R6 Class (encapsulation).
 LazyData: true
 Imports: 
     listviewerlite,
     lobstr,
     R6,
     rlang
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: 
+    quarto
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+License: MIT + file LICENSE
