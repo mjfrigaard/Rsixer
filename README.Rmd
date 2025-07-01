@@ -39,3 +39,10 @@ This is a basic example which shows you how to solve a common problem:
 library(Rsixer)
 ## basic example code
 ```
+
+## R folder tree
+
+```{r}
+fs::dir_tree("R")
+```
+
