@@ -9,3 +9,8 @@ app_ui()
 \description{
 Application UI for Rsixer.
 }
+\details{
+The UI provides buttons for the \code{Counter} demo as well as inputs for
+collecting text, numeric, and file values. A table, plot, and download
+button display the outputs generated from these inputs.
+}

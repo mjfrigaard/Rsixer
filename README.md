@@ -4,7 +4,6 @@
 # Rsixer
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The goal of `Rsixer` is to demonstrate using R6s in Shiny applications.
@@ -25,4 +24,18 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(Rsixer)
 ## basic example code
+```
+
+## R folder tree
+
+``` r
+fs::dir_tree("R")
+#> R
+#> ├── app_server.R
+#> ├── app_ui.R
+#> ├── counter.R
+#> ├── input_collector.R
+#> ├── launch.R
+#> ├── logger.R
+#> └── output_producer.R
 ```

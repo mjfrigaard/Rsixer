@@ -9,3 +9,9 @@ app_server(input, output, session)
 \description{
 Application server for Rsixer.
 }
+\details{
+In addition to the counter example, this server instantiates an
+\code{InputCollector} and \code{OutputProducer} to record the user's text,
+numeric, and file inputs. The collected values are displayed in a
+table and plot and can be downloaded as a CSV file.
+}
