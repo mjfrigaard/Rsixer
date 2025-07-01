@@ -17,11 +17,14 @@ vignette: >
 ---
 
 ```{r}
-#| labe: pkgs
+#| label: pkgs
 library(Rsixer)
 library(sloop)
 library(R6)
 ```
+
+This vignette demonstrates how basic R6 classes work. We'll start with a simple
+`Person` class that prints a greeting when created.
 
 ```{r}
 Person <- R6::R6Class("Person",
@@ -45,9 +48,15 @@ ann <- Person$new("Ann", "black")
 sloop::otype(ann)
 ```
 
+The `Person` class stores some basic fields and uses `greet()` to print a
+message. When we inspect `ann` we can see it's an R6 object:
+
 ```{r}
 ann
 ```
+
+Next we'll create a `Counter` class that can increment and reset an internal
+value.
 
 ```{r}
 #| label: Counter
@@ -70,3 +79,6 @@ Counter <- R6::R6Class(
   )
 )
 ```
+
+This simple counter allows us to track a numeric state across function calls.
+

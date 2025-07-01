@@ -35,9 +35,11 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r}
 #| label: example
-#| eval: false
 library(Rsixer)
-## basic example code
+# Launch the Shiny application
+if (interactive()) {
+  launch()
+}
 ```
 
 ## R folder tree
