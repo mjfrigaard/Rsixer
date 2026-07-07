@@ -3,3 +3,10 @@
 .RData
 .Ruserdata
 inst/doc
+.claudignore
+.claude/
+.posit/
+.positai/
+CLAUDE.md
+AGENTS.md
+.DS_Store

@@ -1,27 +1,37 @@
-Package: Rsixer
-Type: Package
-Title: Shiny App (built with R6)
+Package: rsixer
+Title: R6-Based Shiny Application Demo
 Version: 0.1.0
-Authors@R: person(
-    "Martin", "Frigaard",
-    role = c("aut", "cre"),
-    email = "mjfrigaard@pm.me",
-    comment = NULL
-  )
-Description: A Shiny Application using the R6 Class (encapsulation).
-LazyData: true
-Imports: 
-    listviewerlite,
-    lobstr,
+Authors@R: 
+    person("Martin", "Frigaard", , "mjfrigaard@pm.me", role = c("aut", "cre"))
+Description: A Shiny application demonstrating R6 object-oriented design patterns
+    for building modular, maintainable Shiny apps. Showcases tooltip and
+    hover-info handling with financial data from tidyfinance and tidyquant.
+License: MIT + file LICENSE
+URL: https://github.com/mjfrigaard/Rsixer
+Imports:
     R6,
-    rlang
-Suggests: 
+    bsicons,
+    bslib (>= 0.5.0),
+    dplyr,
+    glue,
+    htmltools,
+    logger,
+    prompter,
+    reactable,
+    rmarkdown,
+    scales,
+    shiny (>= 1.7.0),
+    shinyalert,
+    shinyhelper,
+    slider,
+    tidyfinance,
+    tidyquant
+Suggests:
+    devtools,
     knitr,
-    rmarkdown
-VignetteBuilder: 
-    quarto
-Config/testthat/edition: 3
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
-License: MIT + file LICENSE
+Config/roxygen2/version: 8.0.0
+Config/testthat/edition: 3

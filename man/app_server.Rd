@@ -2,10 +2,17 @@
 % Please edit documentation in R/app_server.R
 \name{app_server}
 \alias{app_server}
-\title{App Server}
+\title{Application Server}
 \usage{
 app_server(input, output, session)
 }
+\arguments{
+\item{input, output, session}{Standard Shiny server arguments.}
+}
+\value{
+Nothing (called for side-effects).
+}
 \description{
-Application server for Rsixer.
+Top-level server function that initialises all R6 module servers and wires
+reactive values between them.
 }

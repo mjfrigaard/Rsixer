@@ -2,10 +2,14 @@
 % Please edit documentation in R/app_ui.R
 \name{app_ui}
 \alias{app_ui}
-\title{App UI}
+\title{Application UI}
 \usage{
 app_ui()
 }
+\value{
+A \code{shiny.tag} UI object suitable for passing to \code{\link[shiny:shinyApp]{shiny::shinyApp()}}.
+}
 \description{
-Application UI for Rsixer.
+Top-level UI function that wires together all R6 module UIs inside a
+\code{\link[bslib:page_sidebar]{bslib::page_sidebar()}} layout.
 }

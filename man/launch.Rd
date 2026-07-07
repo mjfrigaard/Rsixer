@@ -2,10 +2,28 @@
 % Please edit documentation in R/launch.R
 \name{launch}
 \alias{launch}
-\title{Launch the Shiny App}
+\title{Launch the Rsixer Shiny App}
 \usage{
-launch()
+launch(...)
+}
+\arguments{
+\item{...}{Additional arguments forwarded to \code{\link[shiny:shinyApp]{shiny::shinyApp()}}.}
+}
+\value{
+A Shiny app object (invisibly). When called interactively the app
+opens in the viewer / browser.
 }
 \description{
-Standalone app function.
+Convenience wrapper that calls \code{\link[shiny:shinyApp]{shiny::shinyApp()}} with the package's
+\code{\link[=app_ui]{app_ui()}} and \code{\link[=app_server]{app_server()}} functions. Pass any additional arguments
+through to \code{shinyApp()} (e.g. \code{options = list(port = 4321)}).
+}
+\examples{
+\dontrun{
+rsixer::launch()
+
+# Custom port
+rsixer::launch(options = list(port = 4242, launch.browser = TRUE))
+}
+
 }
