@@ -302,6 +302,55 @@ testthat::test_local()
 | **State Management** | Flat reactive list | Structured R6 objects |
 | **Reusability** | Function-based | Class-based (instantiate multiple times) |
 
+## Troubleshooting
+
+### Data Fetch Issues
+
+**"Failed to retrieve data" warnings on startup**
+
+This occurs when Yahoo Finance is unavailable or there's a network issue. The app automatically falls back to realistic demo data, so functionality is preserved.
+
+```r
+# Check connectivity
+curl::curl_fetch_memory("https://query1.finance.yahoo.com/")
+
+# Or test tidyquant directly
+tidyquant::tq_get("AAPL", get = "stock.prices")
+```
+
+**OpenMP Library Error: `symbol not found '___kmpc_barrier'`**
+
+This indicates a broken `gower` package binary (OpenMP dependency issue). Fix by rebuilding from source:
+
+```r
+# Clear the problematic cache
+system("rm -rf ~/Library/Caches/org.R-project.R/R/renv/cache/v5/macos/R-4.5/x86_64-apple-darwin20/gower")
+
+# Reinstall with source compilation
+renv::restore(rebuild = TRUE)
+```
+
+### Module & Reactive Issues
+
+| Problem | Solution |
+|---------|----------|
+| Reactives don't update after input change | Verify `fetch` trigger is observed in ModOutputs |
+| Module namespace conflicts | Check all module IDs are unique in `app_ui.R` |
+| Download handler fails | Confirm R Markdown template path in `mod_download.R` |
+
+### Logging
+
+Enable debug logging to diagnose issues:
+
+```r
+logger::log_threshold(logger::DEBUG)
+```
+
+Logging namespaces:
+- `"rsixer/data"` - Data fetching errors
+- `"rsixer/outputs"` - Reactive computation issues
+- `"rsixer/app"` - Application lifecycle
+
 ## License
 
 MIT License. See [LICENSE](LICENSE) for details.
