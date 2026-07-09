@@ -124,7 +124,7 @@ get_stock_prices <- function(tickers, from, to = Sys.Date()) {
       # Log which tickers failed
       if (length(failed_tickers) > 0) {
         logger::log_warn(
-          "Partial fetch: failed tickers [{paste(failed_tickers, collapse = ', ')}] using fallback demo data instead",
+          paste0("Partial fetch: failed tickers [", paste(failed_tickers, collapse = ", "), "] using fallback demo data instead"),
           namespace = "rsixer/data"
         )
       }
@@ -134,7 +134,7 @@ get_stock_prices <- function(tickers, from, to = Sys.Date()) {
   
   # All tickers failed; fall back to demo data
   logger::log_warn(
-    "Yahoo Finance unavailable for all tickers [{paste(failed_tickers, collapse = ', ')}]. Using demo data.",
+    paste0("Yahoo Finance unavailable for all tickers [", paste(failed_tickers, collapse = ", "), "]. Using demo data."),
     namespace = "rsixer/data"
   )
   
