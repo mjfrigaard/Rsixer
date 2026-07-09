@@ -105,10 +105,14 @@ get_stock_prices <- function(tickers, from, to = Sys.Date()) {
         })
       },
       error = function(e) {
+        logger::log_debug(
+          glue::glue("tidyquant fetch failed for {ticker}: {conditionMessage(e)}"),
+          namespace = "rsixer/data"
+        )
         NULL
       }
     )
-    
+
     # Check if result is valid (not NULL and has rows)
     if (is.null(result) || nrow(result) == 0) {
       failed_tickers <- c(failed_tickers, ticker)

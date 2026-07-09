@@ -32,7 +32,7 @@ pak::pak("mjfrigaard/Rsixer")
 
 ## Overview
 
-**Rsixer** is a complete, production-ready Shiny application that demonstrates modern R6 design patterns for modular, maintainable Shiny applications. It is functionally equivalent to tooltipexplorer but uses object-oriented principles throughout.
+**Rsixer** is a complete, production-ready Shiny application that demonstrates modern R6 design patterns for modular, maintainable Shiny applications. It is functionally equivalent to `tooltipexplorer` but uses object-oriented principles throughout.
 
 ### What Changed
 
