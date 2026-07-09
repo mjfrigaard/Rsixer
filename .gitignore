@@ -5,6 +5,7 @@
 inst/doc
 .claudignore
 .claude/
+.codegraph/
 .posit/
 .positai/
 CLAUDE.md
