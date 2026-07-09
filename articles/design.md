@@ -33,9 +33,15 @@ inputs <- ModInputs$new(id = "inputs")
 # Use: inputs$ui() and inputs$server()
 ```
 
-**Benefits**: - Single instantiation creates both UI and server
-capabilities - Clear object model - Easy to extend with additional
-methods - Natural support for multiple instances
+**Benefits**:
+
+- Single instantiation creates both UI and server capabilities
+
+- Clear object model
+
+- Easy to extend with additional methods
+
+- Natural support for multiple instances
 
 ### 2. Namespace Isolation via Private Fields
 
@@ -65,9 +71,14 @@ server = function() {
 }
 ```
 
-**Benefits**: - No risk of mismatched IDs between UI and server - Single
-source of truth for namespace - Works seamlessly with
-[`shiny::moduleServer()`](https://rdrr.io/pkg/shiny/man/moduleServer.html)
+**Benefits**:
+
+- No risk of mismatched IDs between UI and server
+
+- Single source of truth for namespace
+
+- Works seamlessly with
+  [`shiny::moduleServer()`](https://rdrr.io/pkg/shiny/man/moduleServer.html)
 
 ### 3. Reactive Dependency Injection
 
@@ -89,9 +100,13 @@ download <- ModDownload$new(id = "download")
 download$server(inputs_r = inputs_r, perf_r = perf_r)
 ```
 
-**Benefits**: - Explicit declaration of dependencies - Easy to test in
-isolation by passing mock reactives - Clear data flow through the
-application
+**Benefits**:
+
+- Explicit declaration of dependencies
+
+- Easy to test in isolation by passing mock reactives
+
+- Clear data flow through the application
 
 ### 4. Encapsulation of Private Reactives
 
@@ -116,8 +131,13 @@ private = list(
 )
 ```
 
-**Benefits**: - Separation of concerns - Easier to read and understand
-module logic - Can be tested independently (with mocking)
+**Benefits**:
+
+- Separation of concerns
+
+- Easier to read and understand module logic
+
+- Can be tested independently (with mocking)
 
 ### 5. Logging with Namespace Isolation
 
@@ -137,5 +157,10 @@ app_set_log_threshold(logger::DEBUG)  # All namespaces
 logger::log_threshold(logger::INFO, namespace = "rsixer/app")  # Specific namespace
 ```
 
-**Benefits**: - Easy to trace execution flow - Can filter by module
-during debugging - Production vs. development modes
+**Benefits**:
+
+- Easy to trace execution flow
+
+- Can filter by module during debugging
+
+- Production vs. development modes

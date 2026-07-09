@@ -14,7 +14,7 @@ library(rsixer)
 
 ### What Changed
 
-| Aspect | Before (tooltipexplorer) | After (Rsixer) |
+| Aspect | Before (`tooltipexplorer`) | After (`Rsixer`) |
 |----|----|----|
 | **Module Architecture** | Function-based (`mod_inputs_ui()` + `mod_inputs_server()`) | R6 classes (`ModInputs$new()` with `$ui()` and `$server()` methods) |
 | **Namespace Management** | Traditional [`shiny::NS()`](https://rdrr.io/pkg/shiny/man/NS.html) + [`shiny::moduleServer()`](https://rdrr.io/pkg/shiny/man/moduleServer.html) | R6-integrated namespace (stored in `private$ns`) |
@@ -103,12 +103,19 @@ ModInputs <- R6::R6Class("ModInputs",
 ### 3. Testing
 
 **Before**: Limited testing infrastructure (no test files in
-tooltipexplorer)
+`tooltipexplorer`)
 
-**After**: Comprehensive testthat suite with 56 test cases covering: -
-R6 class instantiation and methods - UI generation and namespace
-isolation - Server reactives and data pipelines - Utility functions
-(data, logging, operators, helpers) - Error handling and edge cases
+**After**: Comprehensive `testthat` suite with 56 test cases covering:
+
+- R6 class instantiation and methods
+
+- UI generation and namespace isolation
+
+- Server reactives and data pipelines
+
+- Utility functions (data, logging, operators, helpers)
+
+- Error handling and edge cases
 
 ------------------------------------------------------------------------
 
@@ -210,7 +217,7 @@ isolation - Server reactives and data pipelines - Utility functions
         volatility calculation
     - **Purpose**: Reusable data utilities for financial analysis
 
-### tests/testthat/ Directory (Test Suite)
+### `tests/testthat/` Directory (Test Suite)
 
 Comprehensive test coverage across 7 test files:
 
@@ -242,11 +249,14 @@ Comprehensive test coverage across 7 test files:
 
 - **`DESCRIPTION`** - Package metadata, dependencies, testing
   configuration
+
 - **`LICENSE`** / **`LICENSE.md`** - MIT license
+
 - **`README.md`** - Comprehensive documentation (updated)
+
 - **`inst/report_template.Rmd`** - Parameterized R Markdown template for
   reports
-- **`.Rbuildignore`** - Exclusions during package build
-- **`.gitignore`** - Git exclusions
 
-------------------------------------------------------------------------
+- **`.Rbuildignore`** - Exclusions during package build
+
+- **`.gitignore`** - Git exclusions
