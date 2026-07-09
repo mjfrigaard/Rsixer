@@ -1,0 +1,79 @@
+---
+title: "Implementation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Implementation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rsixer)
+```
+
+## Technical Implementation Details
+
+### Shiny Integration
+
+All R6 modules maintain full compatibility with Shiny's module system:
+
+1. **UI Methods**: Return valid Shiny tag objects suitable for embedding in any UI
+2. **Server Methods**: Use `shiny::moduleServer(private$id, ...)` internally
+3. **Namespace Functions**: Store and use `shiny::NS()` in private field
+4. **Reactives**: Return reactive values/expressions directly from `$server()` methods
+
+### Data Pipeline Architecture
+
+```
+ModInputs$server() → inputs_r (reactive list)
+                       ↓
+ModOutputs$server(inputs_r) → prices_r (eventReactive on fetch)
+                                ↓
+                            returns_r (reactive computation)
+                                ↓
+                            perf_r (reactive summary)
+                                ↓
+ModDownload$server(inputs_r, perf_r) → handles download
+```
+
+### Logging Architecture
+
+```
+rsixer/app                 # App-level events
+├── rsixer/inputs        # Input module events
+├── rsixer/outputs       # Output module events
+│   ├── rsixer/tooltip   # Tooltip dispatch
+│   └── rsixer/hoverinfo # Hover-info rendering
+└── rsixer/download      # Download module events
+```
+
+---
+
+## Package Configuration
+
+### DESCRIPTION File
+
+Key sections:
+
+- **Package**: `rsixer`
+- **Version**: `0.1.0`
+- **Type**: Package with Shiny application
+- **Imports**: R6, shiny, bslib, dplyr, tidyquant, reactable, logger, etc.
+- **Suggests**: testthat, knitr
+- **Config/testthat/edition**: 3 (modern testthat)
+- **Roxygen2**: Configured for documentation generation
+
+### renv.lock (Dependencies)
+
+Pins exact versions for reproducibility:
+- R 4.5.0
+- 30+ packages with specific versions
+
+
