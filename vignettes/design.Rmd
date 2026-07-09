@@ -18,7 +18,6 @@ knitr::opts_chunk$set(
 library(rsixer)
 ```
 
-
 ## Design Patterns Implemented
 
 ### 1. R6 Module Pattern
@@ -27,7 +26,7 @@ library(rsixer)
 
 **Solution**: Encapsulate module logic in an R6 class with public `$ui()` and `$server()` methods.
 
-```r
+``` r
 # Traditional approach (old)
 inputs <- list(
   ui = mod_inputs_ui("inputs"),
@@ -40,10 +39,14 @@ inputs <- ModInputs$new(id = "inputs")
 ```
 
 **Benefits**:
-- Single instantiation creates both UI and server capabilities
-- Clear object model
-- Easy to extend with additional methods
-- Natural support for multiple instances
+
+-   Single instantiation creates both UI and server capabilities
+
+-   Clear object model
+
+-   Easy to extend with additional methods
+
+-   Natural support for multiple instances
 
 ### 2. Namespace Isolation via Private Fields
 
@@ -51,7 +54,7 @@ inputs <- ModInputs$new(id = "inputs")
 
 **Solution**: Create `shiny::NS()` once in the constructor and store in private field.
 
-```r
+``` r
 initialize = function(id = "inputs") {
   private$id <- id
   private$ns <- shiny::NS(id)  # Create once
@@ -70,9 +73,12 @@ server = function() {
 ```
 
 **Benefits**:
-- No risk of mismatched IDs between UI and server
-- Single source of truth for namespace
-- Works seamlessly with `shiny::moduleServer()`
+
+-   No risk of mismatched IDs between UI and server
+
+-   Single source of truth for namespace
+
+-   Works seamlessly with `shiny::moduleServer()`
 
 ### 3. Reactive Dependency Injection
 
@@ -80,7 +86,7 @@ server = function() {
 
 **Solution**: Pass reactives as method arguments.
 
-```r
+``` r
 # In app_server
 inputs <- ModInputs$new(id = "inputs")
 inputs_r <- inputs$server()
@@ -93,9 +99,12 @@ download$server(inputs_r = inputs_r, perf_r = perf_r)
 ```
 
 **Benefits**:
-- Explicit declaration of dependencies
-- Easy to test in isolation by passing mock reactives
-- Clear data flow through the application
+
+-   Explicit declaration of dependencies
+
+-   Easy to test in isolation by passing mock reactives
+
+-   Clear data flow through the application
 
 ### 4. Encapsulation of Private Reactives
 
@@ -103,7 +112,7 @@ download$server(inputs_r = inputs_r, perf_r = perf_r)
 
 **Solution**: Use private methods for reactive creation.
 
-```r
+``` r
 private = list(
   prices_reactive = function() {
     shiny::eventReactive(inputs_r()$fetch, {
@@ -119,9 +128,12 @@ private = list(
 ```
 
 **Benefits**:
-- Separation of concerns
-- Easier to read and understand module logic
-- Can be tested independently (with mocking)
+
+-   Separation of concerns
+
+-   Easier to read and understand module logic
+
+-   Can be tested independently (with mocking)
 
 ### 5. Logging with Namespace Isolation
 
@@ -129,7 +141,7 @@ private = list(
 
 **Solution**: Use structured logging with module-specific namespaces.
 
-```r
+``` r
 logger::log_info(
   "Fetch button pressed | tickers: [{paste(input$tickers, collapse = ', ')}]",
   namespace = "rsixer/inputs"
@@ -141,8 +153,9 @@ logger::log_threshold(logger::INFO, namespace = "rsixer/app")  # Specific namesp
 ```
 
 **Benefits**:
-- Easy to trace execution flow
-- Can filter by module during debugging
-- Production vs. development modes
 
+-   Easy to trace execution flow
 
+-   Can filter by module during debugging
+
+-   Production vs. development modes
