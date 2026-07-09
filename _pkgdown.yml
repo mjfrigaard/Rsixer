@@ -1,0 +1,25 @@
+url: https://mjfrigaard.github.io/Rsixer/
+
+navbar:
+  bg: primary       # paint the bar with $primary (Atomic Blue)
+  type: dark        # light text for contrast on the deep blue bar
+
+template:
+  bootstrap: 5
+  theme: arrow-light
+  bslib:
+    primary:   "#1E5F8C"   # Atomic Blue       — links, buttons, navbar
+    secondary: "#2B2B2B"   # Eames Charcoal    — neutral text emphasis
+    success:   "#7B8B47"   # Avocado / Olive   — retro success accent
+    info:      "#4FA5B5"   # Robin's-Egg Blue  — softer secondary blue
+    warning:   "#E87B2D"   # Atomic Tangerine  — primary orange accent
+    danger:    "#B0411C"   # Burnt Sienna      — deep orange danger
+    code-color: "#16486D"  # Deep Atomic Blue  — inline & block code text
+    code-bg:    "#FDEFE0"  # Pale Tangerine    — inline & block code background
+    base_font:
+      google: Ubuntu
+    heading_font:
+      google: Fira Sans Condensed
+    code_font:
+      google: Ubuntu Mono
+

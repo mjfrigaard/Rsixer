@@ -7,7 +7,7 @@ Description: A Shiny application demonstrating R6 object-oriented design pattern
     for building modular, maintainable Shiny apps. Showcases tooltip and
     hover-info handling with financial data from tidyfinance and tidyquant.
 License: MIT + file LICENSE
-URL: https://github.com/mjfrigaard/Rsixer
+URL: https://github.com/mjfrigaard/Rsixer, https://mjfrigaard.github.io/Rsixer/
 Imports:
     R6,
     bsicons,
