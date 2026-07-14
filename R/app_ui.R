@@ -4,7 +4,9 @@
 #' [bslib::page_sidebar()] layout.
 #'
 #' @return A `shiny.tag` UI object suitable for passing to [shiny::shinyApp()].
+#' 
 #' @export
+#' 
 app_ui <- function() {
 
   logger::log_info(
