@@ -8,3 +8,5 @@
 ^docs$
 ^pkgdown$
 ^\.github$
+^AGENTS\.md$
+^CLAUDE\.md$
