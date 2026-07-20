@@ -10,3 +10,5 @@
 ^\.github$
 ^AGENTS\.md$
 ^CLAUDE\.md$
+^\.posit/assistant$
+^\.claude$
