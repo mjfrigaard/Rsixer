@@ -49,35 +49,36 @@ app_ui <- function() {
           }
           .form-control:focus, .form-select:focus {
             background-color: #1a1f28 !important;
-            border-color: #00d9ff !important;
+            border-color: #ff9e1b !important;
             color: #d5dde5 !important;
-            box-shadow: 0 0 0 0.25rem rgba(0, 217, 255, 0.25) !important;
+            box-shadow: 0 0 0 0.25rem rgba(255, 158, 27, 0.25) !important;
           }
           .btn-primary {
-            background-color: #00d9ff !important;
-            border-color: #00d9ff !important;
-            color: #0b0e13 !important;
-          }
-          .btn-primary:hover {
-            background-color: #00f0ff !important;
-            border-color: #00f0ff !important;
-          }
-          .btn-secondary {
             background-color: #ff9e1b !important;
             border-color: #ff9e1b !important;
             color: #0b0e13 !important;
           }
+          .btn-primary:hover {
+            background-color: #00d9ff !important;
+            border-color: #00d9ff !important;
+            color: #0b0e13 !important;
+          }
+          .btn-secondary {
+            background-color: #00d9ff !important;
+            border-color: #00d9ff !important;
+            color: #0b0e13 !important;
+          }
           .btn-secondary:hover {
-            background-color: #ffb74d !important;
-            border-color: #ffb74d !important;
+            background-color: #00f0ff !important;
+            border-color: #00f0ff !important;
           }
           h1, h2, h3, h4, h5, h6 {
-            color: #00d9ff !important;
+            color: #ff9e1b !important;
           }
           .card-header {
             background-color: #1a1f28 !important;
             border-color: #2a313b !important;
-            color: #ff9e1b !important;
+            color: #00d9ff !important;
           }
           .card {
             background-color: #12161d !important;
@@ -93,10 +94,10 @@ app_ui <- function() {
             color: #d5dde5 !important;
           }
           a {
-            color: #00d9ff !important;
+            color: #ff9e1b !important;
           }
           a:hover {
-            color: #ff9e1b !important;
+            color: #00d9ff !important;
           }
           "
         )),

@@ -26,8 +26,8 @@ rsixer_theme <- function() {
     bg = "#0b0e13",           # Terminal background (near-black)
     fg = "#d5dde5",           # Body text
     # Semantic palette
-    primary = "#00d9ff",      # Teal/cyan (financial data accent)
-    secondary = "#ff9e1b",    # Bloomberg amber/yellow
+    primary = "#ff9e1b",      # Bloomberg amber/yellow (primary)
+    secondary = "#00d9ff",    # Teal/cyan (visual variety)
     success = "#2ecc71",      # Up / green
     info = "#4ea1ff",         # Bright cyan
     warning = "#ffb74d",      # Lighter amber
