@@ -19,6 +19,9 @@
 #'
 #' @export
 launch <- function(...) {
+  # Apply Rsixer reactable theme
+  options(reactable.theme = rsixer_reactable_theme())
+
   shiny::shinyApp(
     ui = app_ui(),
     server = app_server,

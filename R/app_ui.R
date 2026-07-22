@@ -31,6 +31,53 @@ app_ui <- function() {
 
       # ── HEAD extras ─────────────────────────────────────────────────────
       shiny::tags$head(
+        # Dark theme CSS overrides
+        shiny::tags$style(htmltools::HTML(
+          "
+          .navbar, .sidebar {
+            background-color: #0b0e13 !important;
+            color: #d5dde5 !important;
+            border-color: #2a313b !important;
+          }
+          .sidebar-content {
+            background-color: #0b0e13 !important;
+          }
+          .form-control, .form-select {
+            background-color: #12161d !important;
+            border-color: #2a313b !important;
+            color: #d5dde5 !important;
+          }
+          .form-control:focus, .form-select:focus {
+            background-color: #1a1f28 !important;
+            border-color: #00d9ff !important;
+            color: #d5dde5 !important;
+            box-shadow: 0 0 0 0.25rem rgba(0, 217, 255, 0.25) !important;
+          }
+          .btn-primary {
+            background-color: #00d9ff !important;
+            border-color: #00d9ff !important;
+            color: #0b0e13 !important;
+          }
+          .btn-primary:hover {
+            background-color: #00f0ff !important;
+            border-color: #00f0ff !important;
+          }
+          .card {
+            background-color: #12161d !important;
+            border-color: #2a313b !important;
+            color: #d5dde5 !important;
+          }
+          label {
+            color: #d5dde5 !important;
+          }
+          .selectize-input, .selectize-dropdown {
+            background-color: #12161d !important;
+            border-color: #2a313b !important;
+            color: #d5dde5 !important;
+          }
+          "
+        )),
+
         # shinyalert JS — required for the delegated .sa-trigger handler.
         shinyalert::useShinyalert(force = TRUE),
 
