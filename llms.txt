@@ -105,6 +105,10 @@ financial analysis dashboards
   : Hover-info Module
 - [`mod_tooltip()`](https://mjfrigaard.github.io/Rsixer/reference/mod_tooltip.md)
   : Tooltip Module
+- [`rsixer_reactable_theme()`](https://mjfrigaard.github.io/Rsixer/reference/rsixer_reactable_theme.md)
+  : Custom reactable theme for Rsixer
+- [`rsixer_theme()`](https://mjfrigaard.github.io/Rsixer/reference/rsixer_theme.md)
+  : Setup Rsixer theme and styling
 - [`summarise_performance()`](https://mjfrigaard.github.io/Rsixer/reference/summarise_performance.md)
   : Summarise Performance Metrics by Ticker
 - [`with_logging()`](https://mjfrigaard.github.io/Rsixer/reference/with_logging.md)
@@ -115,6 +119,14 @@ financial analysis dashboards
 ### All vignettes
 
 - [Design](https://mjfrigaard.github.io/Rsixer/articles/design.md):
+
 - [Implementation](https://mjfrigaard.github.io/Rsixer/articles/implementation.md):
+
 - [Structure](https://mjfrigaard.github.io/Rsixer/articles/structure.md):
+
 - [Tests](https://mjfrigaard.github.io/Rsixer/articles/tests.md):
+
+- [Dark Terminal
+  Theme](https://mjfrigaard.github.io/Rsixer/articles/theme.md):
+
+  Rsixer’s Bloomberg-inspired dark theme with yellow and cyan accents

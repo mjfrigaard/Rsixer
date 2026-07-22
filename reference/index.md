@@ -30,6 +30,10 @@
   : Hover-info Module
 - [`mod_tooltip()`](https://mjfrigaard.github.io/Rsixer/reference/mod_tooltip.md)
   : Tooltip Module
+- [`rsixer_reactable_theme()`](https://mjfrigaard.github.io/Rsixer/reference/rsixer_reactable_theme.md)
+  : Custom reactable theme for Rsixer
+- [`rsixer_theme()`](https://mjfrigaard.github.io/Rsixer/reference/rsixer_theme.md)
+  : Setup Rsixer theme and styling
 - [`summarise_performance()`](https://mjfrigaard.github.io/Rsixer/reference/summarise_performance.md)
   : Summarise Performance Metrics by Ticker
 - [`with_logging()`](https://mjfrigaard.github.io/Rsixer/reference/with_logging.md)
