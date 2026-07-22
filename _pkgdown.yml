@@ -1,25 +1,30 @@
 url: https://mjfrigaard.github.io/Rsixer/
 
 navbar:
-  bg: primary       # paint the bar with $primary (Atomic Blue)
-  type: dark        # light text for contrast on the deep blue bar
+  bg: primary       # paint the bar with primary (Bloomberg amber)
+  type: dark        # light text for contrast on dark background
 
 template:
   bootstrap: 5
-  theme: arrow-light
+  theme: darkly
   bslib:
-    primary:   "#1E5F8C"   # Atomic Blue       — links, buttons, navbar
-    secondary: "#2B2B2B"   # Eames Charcoal    — neutral text emphasis
-    success:   "#7B8B47"   # Avocado / Olive   — retro success accent
-    info:      "#4FA5B5"   # Robin's-Egg Blue  — softer secondary blue
-    warning:   "#E87B2D"   # Atomic Tangerine  — primary orange accent
-    danger:    "#B0411C"   # Burnt Sienna      — deep orange danger
-    code-color: "#16486D"  # Deep Atomic Blue  — inline & block code text
-    code-bg:    "#FDEFE0"  # Pale Tangerine    — inline & block code background
+    bg: "#0b0e13"          # Terminal background (near-black)
+    fg: "#d5dde5"          # Body text (light grey)
+    primary:   "#ff9e1b"   # Bloomberg amber       — buttons, headings, links
+    secondary: "#00d9ff"   # Cyan                  — hover, secondary accents
+    success:   "#2ecc71"   # Green                 — success, gains
+    info:      "#4ea1ff"   # Bright cyan           — info accents
+    warning:   "#ff9e1b"   # Bloomberg amber       — warning accent
+    danger:    "#ff4d4f"   # Red                   — danger, losses
+    body-bg:   "#0b0e13"   # Dark background
+    body-color: "#d5dde5"  # Light text
+    border-color: "#2a313b" # Dark borders
+    code-color: "#00d9ff"  # Cyan for inline code
+    code-bg:    "#12161d"  # Dark code background
     base_font:
-      google: Ubuntu
+      google: "IBM Plex Mono"
     heading_font:
-      google: Fira Sans Condensed
+      google: "IBM Plex Mono"
     code_font:
-      google: Ubuntu Mono
+      google: "IBM Plex Mono"
 
