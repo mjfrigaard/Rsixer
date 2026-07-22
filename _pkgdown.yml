@@ -6,7 +6,6 @@ navbar:
 
 template:
   bootstrap: 5
-  theme: darkly
   bslib:
     bg: "#0b0e13"          # Terminal background (near-black)
     fg: "#d5dde5"          # Body text (light grey)
