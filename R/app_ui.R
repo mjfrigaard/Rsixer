@@ -62,6 +62,23 @@ app_ui <- function() {
             background-color: #00f0ff !important;
             border-color: #00f0ff !important;
           }
+          .btn-secondary {
+            background-color: #ff9e1b !important;
+            border-color: #ff9e1b !important;
+            color: #0b0e13 !important;
+          }
+          .btn-secondary:hover {
+            background-color: #ffb74d !important;
+            border-color: #ffb74d !important;
+          }
+          h1, h2, h3, h4, h5, h6 {
+            color: #00d9ff !important;
+          }
+          .card-header {
+            background-color: #1a1f28 !important;
+            border-color: #2a313b !important;
+            color: #ff9e1b !important;
+          }
           .card {
             background-color: #12161d !important;
             border-color: #2a313b !important;
@@ -74,6 +91,12 @@ app_ui <- function() {
             background-color: #12161d !important;
             border-color: #2a313b !important;
             color: #d5dde5 !important;
+          }
+          a {
+            color: #00d9ff !important;
+          }
+          a:hover {
+            color: #ff9e1b !important;
           }
           "
         )),

@@ -27,10 +27,10 @@ rsixer_theme <- function() {
     fg = "#d5dde5",           # Body text
     # Semantic palette
     primary = "#00d9ff",      # Teal/cyan (financial data accent)
-    secondary = "#8b95a1",    # Muted grey
+    secondary = "#ff9e1b",    # Bloomberg amber/yellow
     success = "#2ecc71",      # Up / green
     info = "#4ea1ff",         # Bright cyan
-    warning = "#ff9e1b",      # Bloomberg amber
+    warning = "#ffb74d",      # Lighter amber
     danger = "#ff4d4f",       # Down / red
     # Typography (mono everywhere)
     font_family_base = mono,
