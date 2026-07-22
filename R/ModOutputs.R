@@ -263,13 +263,13 @@ ModOutputs <- R6::R6Class(
               boxes <- lapply(seq_len(nrow(df)), function(i) {
                 row <- df[i, ]
                 sharpe <- round(row$sharpe, 2)
-                theme <- if (sharpe >= 1) "success" else if (sharpe >= 0) "warning" else "danger"
 
                 bslib::value_box(
                   title = row$symbol,
                   value = scales::percent(row$ann_return, accuracy = 0.1),
                   showcase = bsicons::bs_icon("bar-chart-fill"),
-                  theme = theme,
+                  theme = "warning",
+                  class = "vb-yellow-black",
                   shiny::p(glue::glue(
                     "Vol: {scales::percent(row$ann_vol, accuracy = 0.1)}  |  Sharpe: {sharpe}"
                   ))
@@ -314,14 +314,16 @@ ModOutputs <- R6::R6Class(
                   title = shiny::tagList(
                     row$symbol,
                     mod_tooltip(
-                      trigger = bsicons::bs_icon("info-circle-fill", class = "ms-1 text-info"),
+                      trigger = bsicons::bs_icon("info-circle-fill", class = "ms-1"),
                       type = "bslib",
                       contents = as.character(popover_body),
                       title = glue::glue("{row$symbol} - Performance Summary")
                     )
                   ),
                   value = scales::percent(row$ann_return, accuracy = 0.1),
-                  showcase = bsicons::bs_icon("graph-up-arrow")
+                  showcase = bsicons::bs_icon("graph-up-arrow"),
+                  theme = "warning",
+                  class = "vb-yellow-black"
                 )
               })
 
