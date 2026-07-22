@@ -99,21 +99,31 @@ app_ui <- function() {
           a:hover {
             color: #00d9ff !important;
           }
-          .vb-yellow-black {
+          .vb-yellow-black,
+          .bslib-value-box.bg-warning {
             background-color: #ff9e1b !important;
             border-color: #ff9e1b !important;
+            color: #0b0e13 !important;
+          }
+          .vb-yellow-black *,
+          .bslib-value-box.bg-warning * {
+            color: #0b0e13 !important;
+          }
+          .vb-yellow-black svg,
+          .bslib-value-box.bg-warning svg {
+            stroke: #0b0e13 !important;
+            fill: #0b0e13 !important;
+          }
+          .vb-yellow-black .bs-icon,
+          .bslib-value-box.bg-warning .bs-icon {
+            color: #0b0e13 !important;
           }
           .vb-yellow-black .value-box-title,
           .vb-yellow-black .value-box-value,
-          .vb-yellow-black .value-box-subtitle {
-            color: #0b0e13 !important;
-          }
-          .bslib-value-box.bslib-bs5.bg-warning {
-            background-color: #ff9e1b !important;
-            color: #0b0e13 !important;
-          }
-          .bslib-value-box.bslib-bs5.bg-warning .value-box-title,
-          .bslib-value-box.bslib-bs5.bg-warning .value-box-value {
+          .vb-yellow-black .value-box-subtitle,
+          .bslib-value-box.bg-warning .value-box-title,
+          .bslib-value-box.bg-warning .value-box-value,
+          .bslib-value-box.bg-warning .value-box-subtitle {
             color: #0b0e13 !important;
           }
           "
