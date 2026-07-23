@@ -17,32 +17,32 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-Rsixer uses a dark, Bloomberg-terminal inspired theme designed for financial data visualization. The theme features:
+`Rsixer` uses a dark, Bloomberg-terminal inspired theme designed for financial data visualization. The theme features:
 
-- **Dark background** for reduced eye strain during extended use
-- **Yellow/amber primary color** (#ff9e1b) for buttons, headings, and interactive elements
-- **Cyan secondary color** (#00d9ff) for hover states and interactive feedback
-- **Monospace typography** (IBM Plex Mono) for a terminal aesthetic
-- **Semantic colors** for data visualization (green for gains, red for losses, cyan for info)
+-   **Dark background** for reduced eye strain during extended use
+-   **Yellow/amber primary color** (#ff9e1b) for buttons, headings, and interactive elements
+-   **Cyan secondary color** (#00d9ff) for hover states and interactive feedback
+-   **Monospace typography** (IBM Plex Mono) for a terminal aesthetic
+-   **Semantic colors** for data visualization (green for gains, red for losses, cyan for info)
 
 ## Color Palette
 
-| Element | Color | Hex |
-|---------|-------|-----|
-| Background | Near-black | #0b0e13 |
-| Text | Light grey | #d5dde5 |
-| Primary (buttons, headings) | Amber | #ff9e1b |
-| Secondary (hover, focus) | Cyan | #00d9ff |
-| Success (gains) | Green | #2ecc71 |
-| Danger (losses) | Red | #ff4d4f |
-| Info | Bright cyan | #4ea1ff |
-| Border | Dark grey | #2a313b |
+| Element                     | Color       | Hex     |
+|-----------------------------|-------------|---------|
+| Background                  | Near-black  | #0b0e13 |
+| Text                        | Light grey  | #d5dde5 |
+| Primary (buttons, headings) | Amber       | #ff9e1b |
+| Secondary (hover, focus)    | Cyan        | #00d9ff |
+| Success (gains)             | Green       | #2ecc71 |
+| Danger (losses)             | Red         | #ff4d4f |
+| Info                        | Bright cyan | #4ea1ff |
+| Border                      | Dark grey   | #2a313b |
 
-## Using the Theme
+## Using the theme
 
 The theme is automatically applied when you launch the app:
 
-```r
+``` r
 library(rsixer)
 rsixer::launch()
 ```
@@ -51,7 +51,7 @@ rsixer::launch()
 
 You can extend the theme for your own apps by importing the `rsixer_theme()` function:
 
-```r
+``` r
 library(rsixer)
 library(shiny)
 
@@ -70,13 +70,13 @@ shinyApp(ui, server)
 
 ### Reactable Tables
 
-The app also includes a custom reactable theme for dark-themed data tables:
+The app also includes a custom `reactable` theme for dark-themed data tables:
 
-```r
+``` r
 options(reactable.theme = rsixer_reactable_theme())
 ```
 
-This applies consistent dark styling to all reactable tables in your session.
+This applies consistent dark styling to all `reactable` tables in your session.
 
 ## Design Rationale
 
@@ -87,22 +87,32 @@ The near-black background (#0b0e13) reduces glare and eye strain, making it comf
 ### Yellow as Primary
 
 Yellow/amber (#ff9e1b) is the primary interactive color, used for:
-- Primary buttons
-- Headings (h1-h6)
-- Links
-- Card headers
-- Primary navigation elements
+
+-   Primary buttons
+
+-   Headings (h1-h6)
+
+-   Links
+
+-   Card headers
+
+-   Primary navigation elements
 
 This warm, energetic color draws attention while maintaining readability against the dark background.
 
 ### Cyan for Interaction
 
 Cyan (#00d9ff) serves as the secondary color for interactive feedback:
-- Button hover states
-- Form focus rings
-- Secondary buttons
-- Link hover states
-- Tooltips and popovers
+
+-   Button hover states
+
+-   Form focus rings
+
+-   Secondary buttons
+
+-   Link hover states
+
+-   Tooltips and popovers
 
 This creates a clear visual distinction between primary actions and interactive feedback.
 
@@ -114,7 +124,7 @@ All text uses IBM Plex Mono, a terminal-style monospace font that reinforces the
 
 The app's KPI value boxes use yellow backgrounds (#ff9e1b) with black text for maximum contrast and visual prominence:
 
-```r
+``` r
 bslib::value_box(
   title = "Ticker",
   value = "12.5%",
@@ -129,21 +139,24 @@ The `vb-yellow-black` class ensures all content (text, icons, SVG elements) rema
 
 The theme is implemented through:
 
-1. **`rsixer_theme()`** - Main bslib theme function defining colors, fonts, and surfaces
-2. **`rsixer_reactable_theme()`** - Custom reactable table styling
-3. **CSS overrides** - Additional styles for sidebar, forms, buttons, and interactive elements
+1.  **`rsixer_theme()`** - Main `bslib` theme function defining colors, fonts, and surfaces
+2.  **`rsixer_reactable_theme()`** - Custom `reactable` table styling
+3.  **CSS overrides** - Additional styles for sidebar, forms, buttons, and interactive elements
 
 All theme configuration is in:
-- `R/utils_theme.R` - Theme function
-- `R/utils_reactable_theme.R` - Reactable theme
-- `R/app_ui.R` - CSS overrides (in `<head>`)
+
+-    `R/utils_theme.R` : theme function
+
+-   `R/utils_reactable_theme.R` : `reactable` theme
+
+-   `R/app_ui.R` : CSS overrides (in `<head>`)
 
 ## Accessibility
 
 The dark theme with yellow and cyan accents meets WCAG AA contrast ratios:
 
-- Yellow text on dark background: 12.3:1 contrast ratio
-- Cyan text on dark background: 6.2:1 contrast ratio
-- Black text on yellow background: 15.0:1 contrast ratio
+-   Yellow text on dark background: 12.3:1 contrast ratio
+-   Cyan text on dark background: 6.2:1 contrast ratio
+-   Black text on yellow background: 15.0:1 contrast ratio
 
 This ensures the theme is readable for users with color vision deficiency and other accessibility needs.

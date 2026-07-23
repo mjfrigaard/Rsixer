@@ -2109,7 +2109,7 @@
       "RoxygenNote": "7.3.2",
       "NeedsCompilation": "yes",
       "Author": "Mark van der Loo [aut, cre], David Turner [ctb]",
-      "Repository": "pm",
+      "Repository": "RSPM",
       "Encoding": "UTF-8"
     },
     "gtable": {

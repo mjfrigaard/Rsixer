@@ -23,7 +23,7 @@ library(rsixer)
 ### What Changed
 
 | Aspect | Before (`tooltipexplorer`) | After (`Rsixer`) |
-|----------------|-----------------------------------|---------------------|
+|------------------|----------------------------------|---------------------|
 | **Module Architecture** | Function-based (`mod_inputs_ui()` + `mod_inputs_server()`) | R6 classes (`ModInputs$new()` with `$ui()` and `$server()` methods) |
 | **Namespace Management** | Traditional `shiny::NS()` + `shiny::moduleServer()` | R6-integrated namespace (stored in `private$ns`) |
 | **Module Composition** | Separate UI and server function calls | Single R6 object instantiation |
@@ -200,27 +200,6 @@ ModInputs <- R6::R6Class("ModInputs",
         -   `summarise_performance(returns)` - Calculates annualised metrics (return, volatility, Sharpe)
         -   `compute_rolling_vol(returns, window)` - Rolling window volatility calculation
     -   **Purpose**: Reusable data utilities for financial analysis
-
-### `tests/testthat/` Directory (Test Suite)
-
-Comprehensive test coverage across 7 test files:
-
-1.  **`test_mod_inputs.R`** - 7 test cases
-    -   R6 instantiation, UI structure, namespace IDs, server reactives, isolation
-2.  **`test_mod_outputs.R`** - 6 test cases
-    -   R6 instantiation, UI structure with 5 tabs, namespace IDs, reactive performance tibble
-3.  **`test_mod_download.R`** - 4 test cases
-    -   R6 instantiation, server integration with reactives, namespace isolation
-4.  **`test_utils_data.R`** - 11 test cases
-    -   Log return computation, NA handling, performance metrics, rolling volatility
-5.  **`test_utils_logging.R`** - 7 test cases
-    -   Expression execution, error re-throwing, warning suppression, null-coalescing operator
-6.  **`test_mod_tooltip.R`** - 10 test cases
-    -   Backend dispatching (bslib, shinyhelper, prompter, shinyalert), style/size parameters
-7.  **`test_mod_hoverinfo.R`** - 11 test cases
-    -   Span tag generation, title attributes, named vectors, style/size handling
-
-**Total Test Cases**: 56
 
 ### Supporting Files
 
