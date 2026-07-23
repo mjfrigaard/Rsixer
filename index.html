@@ -62,7 +62,7 @@
 </h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of <code>Rsixer</code> is to demonstrate using R6s in Shiny applications.</p>
+<p>The goal of <code>Rsixer</code> is to demonstrate using <code>R6</code>s in Shiny applications.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -74,7 +74,7 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p><strong>Rsixer</strong> is a complete, production-ready Shiny application that demonstrates modern R6 design patterns for modular, maintainable Shiny applications. It is functionally equivalent to <code>tooltipexplorer</code> but uses object-oriented principles throughout.</p>
+<p><code>Rsixer</code> is a complete, production-ready Shiny application that demonstrates modern R6 design patterns for modular, maintainable Shiny applications. It is functionally equivalent to <code>tooltipexplorer</code> but uses object-oriented principles throughout.</p>
 </div>
 <div class="section level2">
 <h2 id="deployment--distribution">Deployment &amp; Distribution<a class="anchor" aria-label="anchor" href="#deployment--distribution"></a>
@@ -99,13 +99,24 @@
 <div class="section level3">
 <h3 id="customization">Customization<a class="anchor" aria-label="anchor" href="#customization"></a>
 </h3>
-<p>Users can extend the package by: 1. Creating new R6 module classes following the established patterns 2. Reusing data utility functions in their own applications 3. Using the app as a template for similar financial analysis dashboards</p>
+<p>Users can extend the package by:</p>
+<ol style="list-style-type: decimal">
+<li>Creating new R6 module classes following the established patterns</li>
+<li>Reusing data utility functions in their own applications</li>
+<li>Using the app as a template for similar financial analysis dashboards</li>
+</ol>
 </div>
 </div>
 <div class="section level2">
 <h2 id="files-summary">Files Summary<a class="anchor" aria-label="anchor" href="#files-summary"></a>
 </h2>
 <table class="table">
+<colgroup>
+<col width="30%">
+<col width="14%">
+<col width="13%">
+<col width="42%">
+</colgroup>
 <thead><tr>
 <th>File</th>
 <th>Type</th>
@@ -114,97 +125,91 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>mod_inputs.R</td>
+<td><code>mod_inputs.R</code></td>
 <td>R6 Class</td>
 <td>112</td>
 <td>Input sidebar module</td>
 </tr>
 <tr>
-<td>mod_outputs.R</td>
+<td><code>mod_outputs.R</code></td>
 <td>R6 Class</td>
 <td>456</td>
 <td>Main content with 5 demo tabs</td>
 </tr>
 <tr>
-<td>mod_download.R</td>
+<td><code>mod_download.R</code></td>
 <td>R6 Class</td>
 <td>97</td>
 <td>Report download module</td>
 </tr>
 <tr>
-<td>app_ui.R</td>
+<td><code>app_ui.R</code></td>
 <td>Function</td>
 <td>87</td>
 <td>Top-level UI composition</td>
 </tr>
 <tr>
-<td>app_server.R</td>
+<td><code>app_server.R</code></td>
 <td>Function</td>
 <td>54</td>
 <td>Top-level server orchestration</td>
 </tr>
 <tr>
-<td>launch.R</td>
+<td><code>launch.R</code></td>
 <td>Function</td>
 <td>28</td>
 <td>App launcher</td>
 </tr>
 <tr>
-<td>mod_tooltip.R</td>
+<td><code>mod_tooltip.R</code></td>
 <td>Function</td>
 <td>174</td>
 <td>Tooltip helper (5 backends)</td>
 </tr>
 <tr>
-<td>mod_hoverinfo.R</td>
+<td><code>mod_hoverinfo.R</code></td>
 <td>Function</td>
 <td>80</td>
 <td>Hover-info helper</td>
 </tr>
 <tr>
-<td>utils_logging.R</td>
+<td><code>utils_logging.R</code></td>
 <td>Functions</td>
 <td>71</td>
 <td>Logging utilities</td>
 </tr>
 <tr>
-<td>utils_operators.R</td>
+<td><code>utils_operators.R</code></td>
 <td>Operator</td>
 <td>14</td>
 <td>%||% null-coalescing</td>
 </tr>
 <tr>
-<td>utils_data.R</td>
+<td><code>utils_data.R</code></td>
 <td>Functions</td>
 <td>115</td>
 <td>Data utilities (5 functions)</td>
 </tr>
 <tr>
-<td>DESCRIPTION</td>
+<td><code>DESCRIPTION</code></td>
 <td>Config</td>
 <td>36</td>
 <td>Package metadata</td>
 </tr>
 <tr>
-<td>README.md</td>
+<td><code>README.md</code></td>
 <td>Doc</td>
 <td>280+</td>
 <td>Comprehensive guide</td>
 </tr>
 <tr>
-<td>IMPLEMENTATION_SUMMARY.md</td>
-<td>Doc</td>
-<td>This file</td>
-<td>Implementation details</td>
-</tr>
-<tr>
-<td>test_*.R</td>
+<td><code>test_*.R</code></td>
 <td>Tests</td>
 <td>56 cases</td>
 <td>Comprehensive test suite</td>
 </tr>
 <tr>
-<td>report_template.Rmd</td>
+<td><code>report_template.Rmd</code></td>
 <td>Template</td>
 <td>153</td>
 <td>R Markdown report template</td>
