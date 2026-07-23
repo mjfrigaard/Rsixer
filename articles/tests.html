@@ -78,8 +78,63 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     %||%</span></span></code></pre></div>
 <div class="section level2">
-<h2 id="testing-quality-assurance">Testing &amp; Quality Assurance<a class="anchor" aria-label="anchor" href="#testing-quality-assurance"></a>
+<h2 id="teststestthat-directory-test-suite">
+<code>tests/testthat/</code> Directory (Test Suite)<a class="anchor" aria-label="anchor" href="#teststestthat-directory-test-suite"></a>
 </h2>
+<p>Comprehensive test coverage across 7 test files:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong><code>test_mod_inputs.R</code></strong> - 7 test cases
+<ul>
+<li>R6 instantiation, UI structure, namespace IDs, server reactives,
+isolation</li>
+</ul>
+</li>
+<li>
+<strong><code>test_mod_outputs.R</code></strong> - 6 test cases
+<ul>
+<li>R6 instantiation, UI structure with 5 tabs, namespace IDs, reactive
+performance tibble</li>
+</ul>
+</li>
+<li>
+<strong><code>test_mod_download.R</code></strong> - 4 test cases
+<ul>
+<li>R6 instantiation, server integration with reactives, namespace
+isolation</li>
+</ul>
+</li>
+<li>
+<strong><code>test_utils_data.R</code></strong> - 11 test cases
+<ul>
+<li>Log return computation, NA handling, performance metrics, rolling
+volatility</li>
+</ul>
+</li>
+<li>
+<strong><code>test_utils_logging.R</code></strong> - 7 test cases
+<ul>
+<li>Expression execution, error re-throwing, warning suppression,
+null-coalescing operator</li>
+</ul>
+</li>
+<li>
+<strong><code>test_mod_tooltip.R</code></strong> - 10 test cases
+<ul>
+<li>Backend dispatching (<code>bslib</code>, <code>shinyhelper</code>,
+<code>prompter</code>, <code>shinyalert</code>), style/size
+parameters</li>
+</ul>
+</li>
+<li>
+<strong><code>test_mod_hoverinfo.R</code></strong> - 11 test cases
+<ul>
+<li>Span tag generation, title attributes, named vectors, style/size
+handling</li>
+</ul>
+</li>
+</ol>
+<p><strong>Total Test Cases</strong>: 56</p>
 <div class="section level3">
 <h3 id="test-execution">Test Execution<a class="anchor" aria-label="anchor" href="#test-execution"></a>
 </h3>

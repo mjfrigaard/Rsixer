@@ -2,7 +2,7 @@
 
 ## Overview
 
-Rsixer uses a dark, Bloomberg-terminal inspired theme designed for
+`Rsixer` uses a dark, Bloomberg-terminal inspired theme designed for
 financial data visualization. The theme features:
 
 - **Dark background** for reduced eye strain during extended use
@@ -27,7 +27,7 @@ financial data visualization. The theme features:
 | Info                        | Bright cyan | \#4ea1ff |
 | Border                      | Dark grey   | \#2a313b |
 
-## Using the Theme
+## Using the theme
 
 The theme is automatically applied when you launch the app:
 
@@ -63,7 +63,7 @@ shinyApp(ui, server)
 
 ### Reactable Tables
 
-The app also includes a custom reactable theme for dark-themed data
+The app also includes a custom `reactable` theme for dark-themed data
 tables:
 
 ``` r
@@ -71,7 +71,7 @@ tables:
 options(reactable.theme = rsixer_reactable_theme())
 ```
 
-This applies consistent dark styling to all reactable tables in your
+This applies consistent dark styling to all `reactable` tables in your
 session.
 
 ## Design Rationale
@@ -84,18 +84,34 @@ analyses.
 
 ### Yellow as Primary
 
-Yellow/amber (#ff9e1b) is the primary interactive color, used for: -
-Primary buttons - Headings (h1-h6) - Links - Card headers - Primary
-navigation elements
+Yellow/amber (#ff9e1b) is the primary interactive color, used for:
+
+- Primary buttons
+
+- Headings (h1-h6)
+
+- Links
+
+- Card headers
+
+- Primary navigation elements
 
 This warm, energetic color draws attention while maintaining readability
 against the dark background.
 
 ### Cyan for Interaction
 
-Cyan (#00d9ff) serves as the secondary color for interactive feedback: -
-Button hover states - Form focus rings - Secondary buttons - Link hover
-states - Tooltips and popovers
+Cyan (#00d9ff) serves as the secondary color for interactive feedback:
+
+- Button hover states
+
+- Form focus rings
+
+- Secondary buttons
+
+- Link hover states
+
+- Tooltips and popovers
 
 This creates a clear visual distinction between primary actions and
 interactive feedback.
@@ -130,15 +146,19 @@ elements) remains black for optimal readability.
 The theme is implemented through:
 
 1.  **[`rsixer_theme()`](https://mjfrigaard.github.io/Rsixer/reference/rsixer_theme.md)** -
-    Main bslib theme function defining colors, fonts, and surfaces
+    Main `bslib` theme function defining colors, fonts, and surfaces
 2.  **[`rsixer_reactable_theme()`](https://mjfrigaard.github.io/Rsixer/reference/rsixer_reactable_theme.md)** -
-    Custom reactable table styling
+    Custom `reactable` table styling
 3.  **CSS overrides** - Additional styles for sidebar, forms, buttons,
     and interactive elements
 
-All theme configuration is in: - `R/utils_theme.R` - Theme function -
-`R/utils_reactable_theme.R` - Reactable theme - `R/app_ui.R` - CSS
-overrides (in `<head>`)
+All theme configuration is in:
+
+- `R/utils_theme.R` : theme function
+
+- `R/utils_reactable_theme.R` : `reactable` theme
+
+- `R/app_ui.R` : CSS overrides (in `<head>`)
 
 ## Accessibility
 

@@ -75,8 +75,8 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>Rsixer uses a dark, Bloomberg-terminal inspired theme designed for
-financial data visualization. The theme features:</p>
+<p><code>Rsixer</code> uses a dark, Bloomberg-terminal inspired theme
+designed for financial data visualization. The theme features:</p>
 <ul>
 <li>
 <strong>Dark background</strong> for reduced eye strain during
@@ -149,7 +149,7 @@ gains, red for losses, cyan for info)</li>
 </table>
 </div>
 <div class="section level2">
-<h2 id="using-the-theme">Using the Theme<a class="anchor" aria-label="anchor" href="#using-the-theme"></a>
+<h2 id="using-the-theme">Using the theme<a class="anchor" aria-label="anchor" href="#using-the-theme"></a>
 </h2>
 <p>The theme is automatically applied when you launch the app:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -179,12 +179,12 @@ gains, red for losses, cyan for info)</li>
 <div class="section level3">
 <h3 id="reactable-tables">Reactable Tables<a class="anchor" aria-label="anchor" href="#reactable-tables"></a>
 </h3>
-<p>The app also includes a custom reactable theme for dark-themed data
-tables:</p>
+<p>The app also includes a custom <code>reactable</code> theme for
+dark-themed data tables:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>reactable.theme <span class="op">=</span> <span class="fu"><a href="../reference/rsixer_reactable_theme.html">rsixer_reactable_theme</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>This applies consistent dark styling to all reactable tables in your
-session.</p>
+<p>This applies consistent dark styling to all <code>reactable</code>
+tables in your session.</p>
 </div>
 </div>
 <div class="section level2">
@@ -200,9 +200,15 @@ data analyses.</p>
 <div class="section level3">
 <h3 id="yellow-as-primary">Yellow as Primary<a class="anchor" aria-label="anchor" href="#yellow-as-primary"></a>
 </h3>
-<p>Yellow/amber (#ff9e1b) is the primary interactive color, used for: -
-Primary buttons - Headings (h1-h6) - Links - Card headers - Primary
-navigation elements</p>
+<p>Yellow/amber (#ff9e1b) is the primary interactive color, used
+for:</p>
+<ul>
+<li><p>Primary buttons</p></li>
+<li><p>Headings (h1-h6)</p></li>
+<li><p>Links</p></li>
+<li><p>Card headers</p></li>
+<li><p>Primary navigation elements</p></li>
+</ul>
 <p>This warm, energetic color draws attention while maintaining
 readability against the dark background.</p>
 </div>
@@ -210,8 +216,14 @@ readability against the dark background.</p>
 <h3 id="cyan-for-interaction">Cyan for Interaction<a class="anchor" aria-label="anchor" href="#cyan-for-interaction"></a>
 </h3>
 <p>Cyan (#00d9ff) serves as the secondary color for interactive
-feedback: - Button hover states - Form focus rings - Secondary buttons -
-Link hover states - Tooltips and popovers</p>
+feedback:</p>
+<ul>
+<li><p>Button hover states</p></li>
+<li><p>Form focus rings</p></li>
+<li><p>Secondary buttons</p></li>
+<li><p>Link hover states</p></li>
+<li><p>Tooltips and popovers</p></li>
+</ul>
 <p>This creates a clear visual distinction between primary actions and
 interactive feedback.</p>
 </div>
@@ -245,19 +257,24 @@ icons, SVG elements) remains black for optimal readability.</p>
 <p>The theme is implemented through:</p>
 <ol style="list-style-type: decimal">
 <li>
-<strong><code><a href="../reference/rsixer_theme.html">rsixer_theme()</a></code></strong> - Main bslib theme
-function defining colors, fonts, and surfaces</li>
+<strong><code><a href="../reference/rsixer_theme.html">rsixer_theme()</a></code></strong> - Main
+<code>bslib</code> theme function defining colors, fonts, and
+surfaces</li>
 <li>
 <strong><code><a href="../reference/rsixer_reactable_theme.html">rsixer_reactable_theme()</a></code></strong> - Custom
-reactable table styling</li>
+<code>reactable</code> table styling</li>
 <li>
 <strong>CSS overrides</strong> - Additional styles for sidebar,
 forms, buttons, and interactive elements</li>
 </ol>
-<p>All theme configuration is in: - <code>R/utils_theme.R</code> - Theme
-function - <code>R/utils_reactable_theme.R</code> - Reactable theme -
-<code>R/app_ui.R</code> - CSS overrides (in
-<code>&lt;head&gt;</code>)</p>
+<p>All theme configuration is in:</p>
+<ul>
+<li><p><code>R/utils_theme.R</code> : theme function</p></li>
+<li><p><code>R/utils_reactable_theme.R</code> : <code>reactable</code>
+theme</p></li>
+<li><p><code>R/app_ui.R</code> : CSS overrides (in
+<code>&lt;head&gt;</code>)</p></li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="accessibility">Accessibility<a class="anchor" aria-label="anchor" href="#accessibility"></a>
